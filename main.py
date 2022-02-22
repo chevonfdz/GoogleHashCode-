@@ -42,6 +42,11 @@ all_dislikes = []
 read_file()
 get_dislikes()
 
+
+for element in all_dislikes:
+    if element in all_likes:
+        all_likes.remove(element)
+
 all_likes = list(dict.fromkeys(all_likes))
 all_dislikes = list(dict.fromkeys(all_dislikes))
 
