@@ -2,7 +2,6 @@ def read_file():
     try:
         with open("a_an_example.in.txt", 'r') as f:
             lines = f.readlines()
-            print(lines)
 
             for line in range(1, len(lines), 2):
                 likes = lines[line].strip().split()
@@ -24,7 +23,6 @@ def get_dislikes():
     try:
         with open("a_an_example.in.txt", 'r') as f:
             lines = f.readlines()
-            print(lines)
 
             for line in range(2, len(lines), 2):
                 dislikes = lines[line].strip().split()
