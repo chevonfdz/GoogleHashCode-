@@ -55,9 +55,10 @@ textfile.write("{} ".format(likesCount))
 for element in all_likes:
     textfile.write(element + " ")
 textfile.close()
+print("Job Done")
 
-all_likes = list(dict.fromkeys(all_likes))
-all_dislikes = list(dict.fromkeys(all_dislikes))
-
-print(all_likes)
-print(all_dislikes)
+# all_likes = list(dict.fromkeys(all_likes))
+# all_dislikes = list(dict.fromkeys(all_dislikes))
+#
+# print(all_likes)
+# print(all_dislikes)
