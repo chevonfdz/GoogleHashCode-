@@ -47,6 +47,15 @@ for element in all_dislikes:
     if element in all_likes:
         all_likes.remove(element)
 
+
+textfile = open("a_file.txt", "w")
+
+likesCount = len(all_likes)
+textfile.write("{} ".format(likesCount))
+for element in all_likes:
+    textfile.write(element + " ")
+textfile.close()
+
 all_likes = list(dict.fromkeys(all_likes))
 all_dislikes = list(dict.fromkeys(all_dislikes))
 
