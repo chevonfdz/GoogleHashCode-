@@ -11,13 +11,16 @@ def read_file():
                 for x in  range(len(likes)):
                     all_likes.append(likes[x])
 
-                print(likes)
-                print("Line {}: {}".format(line, likes))
-                print(all_likes)
+                #print(likes)
+                #print("Line {}: {}".format(line, likes))
+                #print(all_likes)
 
     except FileNotFoundError:
         return "File not found"
 
 all_likes = []
 read_file()
+
+all_likes = list(dict.fromkeys(all_likes))
+print(all_likes)
 
