@@ -1,6 +1,6 @@
-def read_file():
+def get_likes():
     try:
-        with open("a_an_example.in.txt", 'r') as f:
+        with open("e_elaborate.in.txt", 'r') as f:
             lines = f.readlines()
 
             for line in range(1, len(lines), 2):
@@ -10,9 +10,6 @@ def read_file():
                 for x in range(len(likes)):
                     all_likes.append(likes[x])
 
-                # print(likes)
-                # print("Line {}: {}".format(line, likes))
-                # print(all_likes)
             f.close()
 
     except FileNotFoundError:
@@ -21,7 +18,7 @@ def read_file():
 
 def get_dislikes():
     try:
-        with open("a_an_example.in.txt", 'r') as f:
+        with open("b_basic.in.txt", 'r') as f:
             lines = f.readlines()
 
             for line in range(2, len(lines), 2):
@@ -31,15 +28,20 @@ def get_dislikes():
                 for x in range(len(dislikes)):
                     all_dislikes.append(dislikes[x])
 
+            f.close()
+
     except FileNotFoundError:
         return "File not found"
 
 
 all_likes = []
 all_dislikes = []
-read_file()
+
+get_likes()
 get_dislikes()
 
+all_likes = list(dict.fromkeys(all_likes))
+all_dislikes = list(dict.fromkeys(all_dislikes))
 
 for element in all_dislikes:
     if element in all_likes:
@@ -54,9 +56,3 @@ for element in all_likes:
     textfile.write(element + " ")
 textfile.close()
 print("Job Done")
-
-# all_likes = list(dict.fromkeys(all_likes))
-# all_dislikes = list(dict.fromkeys(all_dislikes))
-#
-# print(all_likes)
-# print(all_dislikes)
