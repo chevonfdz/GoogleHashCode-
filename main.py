@@ -46,7 +46,7 @@ for element in all_dislikes:
         all_likes.remove(element)
 
 
-textfile = open("a_file.txt", "w")
+textfile = open("output.txt", "w")
 
 likesCount = len(all_likes)
 textfile.write("{} ".format(likesCount))
