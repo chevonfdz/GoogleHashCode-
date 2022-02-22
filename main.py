@@ -43,5 +43,7 @@ read_file()
 get_dislikes()
 
 all_likes = list(dict.fromkeys(all_likes))
+all_dislikes = list(dict.fromkeys(all_dislikes))
+
 print(all_likes)
 print(all_dislikes)
